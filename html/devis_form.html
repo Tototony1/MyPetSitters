@@ -1,0 +1,79 @@
+            <!-- Formulaire de demande de devis -->
+            <div class="devis-form py-5">
+                <h4 class="h4 text-center pt-3">Demander un devis sur mesure :</h4>
+                <div>
+                    <form action="index.php?controller=devis_traitement" method="post">
+                        <ul class="list-unstyled p-0 m-0">
+                            <!-- Nom et Prénom -->
+                            <div class="d-flex justify-content-around my-4">
+                                <!-- Nom -->
+                                <li class="d-flex flex-column">
+                                    <label for="nom" class="fw-bold">Nom :* </label>
+                                    <input name="nom" 
+                                           type="text" 
+                                           id="nom" 
+                                           class="p-2 mt-2" 
+                                           placeholder="Dupont" 
+                                           required>
+                                </li>
+                                <!-- Prénom -->
+                                <li class="d-flex flex-column">
+                                    <label for="prenom" class="fw-bold">Prénom : </label>
+                                    <input name="prenom" 
+                                           type="text" 
+                                           id="prenom" 
+                                           class="p-2 mt-2" 
+                                           placeholder="Jean">
+                                </li>
+                            </div >
+                            <!-- Téléphone et E-mail -->
+                            <div class="d-flex justify-content-around my-4">
+                                <!-- Téléphone -->
+                                <li class="d-flex flex-column">
+                                    <label for="tel" class="fw-bold">Téléphone : </label>
+                                    <input name="tel" 
+                                           type="tel" 
+                                           pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" 
+                                           id="tel" 
+                                           class="p-2 mt-2" 
+                                           placeholder="0123456789">
+                                </li>
+                                <!-- E-mail -->
+                                <li class="d-flex flex-column">
+                                    <label for="email" class="fw-bold">E-mail :* </label>
+                                    <input name="email" 
+                                           type="text" 
+                                           id="email" 
+                                           class="p-2 mt-2" 
+                                           placeholder="monEmail@monNomDeDomaine.com"
+                                           required>
+                                </li>
+                            </div>
+                            <!-- Description de la demande -->
+                            <div class="d-flex justify-content-around my-4">
+                                <li class="d-flex flex-column">
+                                    <label for="demande" class="fw-bold py-3 text-center">Précisez votre demande :* </label>
+                                    <textarea name="demande" 
+                                              id="demande" 
+                                              cols="30" 
+                                              rows="10"
+                                              placeholder="Description de la demande" 
+                                              required></textarea>
+                                </li>
+                            </div>
+                            <div class="mx-3 mb-3">
+                                <small>* Champs obligatoires</small>
+                            </div>
+                            <!-- Boutons -->
+                            <div class="d-flex justify-content-around pb-3">
+                                <li>
+                                    <button type="submit" class="btn btn-primary mx-5 mb-3 fw-bold" id="envoi">Envoyer</button>
+                                    <a href="#" class="btn btn-primary mx-5 mb-3 fw-bold" id="annuler">Annuler</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>

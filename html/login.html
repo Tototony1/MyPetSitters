@@ -1,0 +1,23 @@
+<!-- Connexion à l'espace administrateur -->
+<div>
+    <h3 class="py-3 my-3 h3 text-center">Connexion administrateur :</h3>
+    <!-- Formulaire de connexion -->
+    <form action="login.php" method="POST">     
+        <ul class="container col-11 d-flex flex-column justify-content-around list-unstyled">
+            <!-- Username -->
+            <li class="d-flex flex-column align-self-center mb-2">
+                <label for="username" class="fw-bold mb-2">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" class="text-center py-1" required>
+            </li>
+            <!-- Password -->
+            <li class="d-flex flex-column align-self-center mb-2">
+                <label for="password" class="fw-bold mb-2">Mot de passe :</label>
+                <input type="password" id="password" name="password" class="text-center py-1" required>
+            </li>
+            <!-- Bouton de validation -->
+            <li class="d-flex flex-column align-self-center mb-2">
+                <input type="submit" class="btn btn-primary" value="Se connecter">
+            </li>
+        </ul>
+    </form>
+</div>

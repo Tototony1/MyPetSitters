@@ -1,0 +1,205 @@
+<h5 class='h5 text-center py-4 px-0'>{titre}</h5>
+<div class="container col-11 py-4 px-0">
+    <!----------------------------------------------------------------- Formulaire tarifs ----------------------------------------------------------------->
+    <div class="{hide_tarifs_form}">
+        <form action="index.php?controller={controller}&page={page}&action={action}" method="POST">
+            <ul class="container col-8 d-flex flex-column justify-content-around list-unstyled">
+                <!-- ID -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="id_tarifs" class="fw-bold mb-2">Identifiant : </label>
+                    <input name="id_tarifs" id="id_tarifs" type="text" value="{id_tarifs}" class="text-center py-2" readonly>
+                </li>
+                <!-- Durée -->
+                <li class="d-flex flex-column mb-2">
+                    <label for="duree_tarifs" class="fw-bold mb-2">Durée : </label>
+                    <input name="duree_tarifs" id="duree_tarifs" type="text" value="{duree_tarifs}" class="p-2" placeholder="exemple : 5h ; 1 journée ; 2 semaines ..." {readonly}>
+                </li>
+                <!-- Famille d'accueil -->
+                <li class="d-flex flex-column mb-2">
+                    <label for="famille_accueil_tarifs" class="fw-bold mb-2" >Famille d'accueil : </label>
+                    <input name="famille_accueil_tarifs" id="famille_accueil_tarifs" type="number" step="0.1" value="{famille_accueil_tarifs}" class="p-2" placeholder="exemple : 5 ; 8,2 ..." {readonly}>
+                </li>
+                <!-- Promenades -->
+                <li class="d-flex flex-column mb-2">
+                    <label for="promenades_tarifs" class="fw-bold mb-2" >Promenades : </label>
+                    <input name="promenades_tarifs" id="promenades_tarifs" type="number" step="0.1" value="{promenades_tarifs}" class="p-2" placeholder="exemple : 5 ; 8,2 ..." {readonly}>
+                </li>
+                <!-- À domicile -->
+                <li class="d-flex flex-column mb-2">
+                    <label for="a_domicile_tarifs" class="fw-bold mb-2" >À domicile : </label>
+                    <input name="a_domicile_tarifs" id="a_domicile_tarifs" type="number" step="0.1" value="{a_domicile_tarifs}" class="p-2" placeholder="exemple : 5 ; 8,2 ..." {readonly}>
+                </li>    
+                <!-- Boutons -->
+                <li class="d-flex justify-content-evenly mt-3">
+                    <!-- Bouton de validation -->
+                    <button type="submit" class="btn btn-primary fw-bold">{bouton}</button>
+                    <!-- Bouton retour -->
+                    <a href="index.php?controller={controller}&page={page}&action=list"
+                        title="Retour à la liste" 
+                        class="btn btn-primary buttonColor fw-bold">
+                        <i class="fa-solid fa-arrow-left"></i> Retour
+                    </a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    
+    <!----------------------------------------------------------------- Formulaire de contact ----------------------------------------------------------------->
+    <div class="{hide_contact_form}">
+        <form action="index.php?controller={controller}&page={page}&action={action}" method="POST">
+            <ul class="container col-8 d-flex flex-column justify-content-around list-unstyled">
+                <!-- ID contact -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <input name="id_contact" id="id_contact" type="text" value="{id_contact}" class="text-center py-2" hidden>
+                </li>
+                <!-- Société -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="societe_contact" class="fw-bold mb-2">Société : </label>
+                    <input name="societe_contact" id="societe_contact" type="text" value="{societe_contact}" class="text-center py-2">
+                </li>
+                <!-- Numéro -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="numero_contact" class="fw-bold mb-2">Numéro : </label>
+                    <input name="numero_contact" id="numero_contact" type="tel" pattern="[0-9]{10}" value="{numero_contact}" class="text-center py-2">
+                </li>
+                <!-- Mail -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="mail_contact" class="fw-bold mb-2">Mail : </label>
+                    <input name="mail_contact" id="mail_contact" type="email" value="{mail_contact}" class="text-center py-2">
+                </li>
+                <!-- Adresse -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="adresse_contact" class="fw-bold mb-2">Adresse : </label>
+                    <input name="adresse_contact" id="adresse_contact" type="text" value="{adresse_contact}" class="text-center py-2">
+                </li>
+                <!-- Code Postal -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="cp_contact" class="fw-bold mb-2">Code postal : </label>
+                    <input name="cp_contact" id="cp_contact" type="number" maxlength="5" value="{cp_contact}" class="text-center py-2">
+                </li>
+                <!-- Ville -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="ville_contact" class="fw-bold mb-2">Ville : </label>
+                    <input name="ville_contact" id="ville_contact" type="text" value="{ville_contact}" class="text-center py-2">
+                </li>
+                <!-- Boutons -->
+                <li class="d-flex justify-content-evenly mt-3">
+                    <!-- Bouton de validation -->
+                    <button type="submit" class="btn btn-primary fw-bold">{bouton}</button>
+                    <!-- Bouton retour -->
+                    <a href="index.php?controller={controller}&page={page}&action=list"
+                        title="Retour à la liste" 
+                        class="btn btn-primary buttonColor fw-bold">
+                        <i class="fa-solid fa-arrow-left"></i> Retour
+                    </a>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <!----------------------------------------------------------------- Formulaire de clients ----------------------------------------------------------------->
+    <div class="{hide_clients_form}">
+        <form action="index.php?controller={controller}&page={page}&action={action}" method="POST">
+            <ul class="container col-11 d-flex flex-column justify-content-around list-unstyled">
+                <!-- ID client -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <input name="id_clients" id="id_clients" type="text" value="{id_clients}" class="text-center py-2" hidden>
+                </li>
+                <!-- Nom -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="nom_clients" class="fw-bold mb-2">Nom : </label>
+                    <input name="nom_clients" id="nom_clients" type="text" value="{nom_clients}" class="text-center py-2">
+                </li>
+                <!-- Prénom -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="prenom_clients" class="fw-bold mb-2">Prénom : </label>
+                    <input name="prenom_clients" id="prenom_clients" type="text" value="{prenom_clients}" class="text-center py-2">
+                </li>
+                <!-- Numéro -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="num_clients" class="fw-bold mb-2">Numéro : </label>
+                    <input name="num_clients" id="num_clients" type="tel" pattern="[0-9]{10}" value="{num_clients}" class="text-center py-2">
+                </li>
+                <!-- E-mail -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="mail_clients" class="fw-bold mb-2">E-mail : </label>
+                    <input name="mail_clients" id="mail_clients" type="email" value="{mail_clients}" class="text-center py-2">
+                </li>
+                <!-- Adresse -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="adresse_clients" class="fw-bold mb-2">Adresse : </label>
+                    <input name="adresse_clients" id="adresse_clients" type="text" value="{adresse_clients}" class="text-center py-2">
+                </li>
+                <!-- Liste animal -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="liste_animal_clients" class="fw-bold mb-2">Animaux Associés : </label>
+                    <textarea name="liste_animal_clients" id="liste_animal_clients" type="text" class="text-center py-2">{liste_animal_clients}</textarea>
+                </li>
+                <!-- Boutons -->
+                <li class="d-flex justify-content-evenly mt-3">
+                    <!-- Bouton de validation -->
+                    <button type="submit" class="btn btn-primary fw-bold">{bouton}</button>
+                    <!-- Bouton retour -->
+                    <a href="index.php?controller={controller}&page={page}&action=list"
+                        title="Retour à la liste" 
+                        class="btn btn-primary buttonColor fw-bold">
+                        <i class="fa-solid fa-arrow-left"></i> Retour
+                    </a>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <!----------------------------------------------------------------- Formulaire animal ----------------------------------------------------------------->
+    <div class="{hide_animaux_form}">
+        <form action="index.php?controller={controller}&page={page}&action={action}" method="POST">
+            <ul class="container col-11 d-flex flex-column justify-content-around list-unstyled">
+                <!-- ID animal -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <input name="id_animal" id="id_animal" type="text" value="{id_animal}" class="text-center py-2" hidden>
+                </li>
+                <!-- Nom -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="nom_animal" class="fw-bold mb-2">Nom : </label>
+                    <input name="nom_animal" id="nom_animal" type="text" value="{nom_animal}" class="text-center py-2">
+                </li>
+                <!-- Age -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="age_animal" class="fw-bold mb-2">Age : </label>
+                    <input name="age_animal" id="age_animal" type="text" value="{age_animal}" class="text-center py-2">
+                </li>
+                <!-- Taille -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="taille_animal" class="fw-bold mb-2">Taille : </label>
+                    <input name="taille_animal" id="taille_animal" type="text" value="{taille_animal}" class="text-center py-2">
+                </li>
+                <!-- Race -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="race_animal" class="fw-bold mb-2">Race : </label>
+                    <input name="race_animal" id="race_animal" type="text" value="{race_animal}" class="text-center py-2">
+                </li>
+                <!-- Particularités -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="particularite_animal" class="fw-bold mb-2">Particularités : </label>
+                    <textarea name="particularite_animal" id="particularite_animal" type="text" class="text-center py-2">{particularite_animal}</textarea>
+                </li>
+                <!-- ID clients -->
+                <li class="d-flex flex-column align-self-center mb-2">
+                    <label for="id_clients" class="fw-bold mb-2">Propriétaires : </label>
+                    <input name="id_clients" id="id_clients" type="number" value="{id_clients}" class="text-center py-2" required>
+                </li>
+                <!-- Boutons -->
+                <li class="d-flex justify-content-evenly mt-3">
+                    <!-- Bouton de validation -->
+                    <button type="submit" class="btn btn-primary fw-bold">{bouton}</button>
+                    <!-- Bouton retour -->
+                    <a href="index.php?controller={controller}&page={page}&action=list"
+                        title="Retour à la liste" 
+                        class="btn btn-primary buttonColor fw-bold">
+                        <i class="fa-solid fa-arrow-left"></i> Retour
+                    </a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div> 

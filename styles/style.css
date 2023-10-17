@@ -1,0 +1,348 @@
+
+/* ----------------------------- Générales ----------------------------- */
+body {
+    background-color: #2cbbc375;
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+.page {
+    background-color: #e1dedcd1;
+    flex:1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* ------------------------------ En-tête ------------------------------ */
+/* Background */
+.couleurNav {
+    height: 15em;
+    background-color: #ffffff;
+    background-image: url(../images/bandeau.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    border-bottom: 2px solid #FF9934;
+}
+
+/* Navigation */
+
+nav .topNav {
+    text-decoration: none;
+    color:black;
+    font-size: 1.3vw;
+}
+nav .topNav:hover {
+    text-decoration: underline;
+}
+nav.topNav ul {
+    border-radius: 25px 0px 0px 25px;
+}
+
+.hNavbar {
+    height: 65%;
+}
+.wNavbar {
+    width: 100%;
+}
+
+/* Menu burger bouton et liste */
+.burger-menu-button,
+.burger-menu-item {
+    display: none;
+}
+
+/* --------------------------- Corps de page --------------------------- */
+/* ____ Leftside ____ */
+/* Générales */
+.wPage {
+    padding: 0em 3em;
+}
+.wPage .leftSide {
+    width: 68%;
+}
+.leftSide .title,
+.title
+{
+    color: #2abac2;
+    border-radius: 40px;
+    background: #d5dedd;
+    box-shadow: 5px 5px 8px #c8d1d0,
+                -5px -5px 8px #e2ebea;
+}
+
+/* Page accueil */
+.leftSide .accroche-color {
+    color: #2abac28a;
+
+}
+.leftSide .paragrapheHome {
+    font-family: sans-serif;
+    border-radius: 40px;
+    background: #d5dedd;
+    box-shadow: inset 5px 5px 8px #c8d1d0,
+                inset -5px -5px 8px #e2ebea;
+}
+
+/* Page tarifs */
+.leftSide .devis-form {
+    border-radius: 40px;
+    background: #d5dedd;
+    box-shadow: inset 5px 5px 8px #c8d1d0,
+                inset -5px -5px 8px #e2ebea;
+}
+.leftSide .devis-form h4,
+.leftSide .devis-form label {
+    color: #0073b1;
+}
+.leftSide .devis-form input, 
+.leftSide .devis-form textarea {
+    background-color: #eaecec;
+}
+.leftSide .devis-form input:focus,
+.leftSide .devis-form textarea:focus {
+    background-color: #96c8e2;
+}
+.leftSide .devis-form input#nom,
+.leftSide .devis-form input#prenom,
+.leftSide .devis-form input#tel,
+.leftSide .devis-form input#email,
+.leftSide .devis-form textarea#demande {
+    width: 15vw;
+    border-radius: 40px;
+}
+.leftSide .devis-form textarea#demande {
+    padding: .8em;
+    width: 45vw;
+}
+.leftSide .devis-form button#envoi,
+.leftSide .devis-form a#annuler {
+    background-color: #0073b1;
+    border:transparent;
+    border-radius: 40px;
+}
+.leftSide .devis-form button#envoi:hover,
+.leftSide .devis-form a#annuler:hover {
+    background-color: #005b8b;
+}
+
+/* Page contact */
+.leftSide .infos-contact {
+    border-radius: 40px;
+    background: #d5dedd;
+    box-shadow: inset 5px 5px 8px #c8d1d0,
+                inset -5px -5px 8px #e2ebea;
+}
+
+/* ____Rightside____ */
+.rightSide {
+    width: 30%;
+    border-radius: 40px;
+    background: #d5dedd;
+    box-shadow:  5px 5px 8px #c8d1d0,
+                 -5px -5px 8px #e2ebea;
+}
+.rightSide aside {
+    padding: 2em;
+}
+.rightSide .tableauHoraire .thead-bg-color {
+    background-color: #b7c1c0;
+}
+.rightSide .tableauHoraire tbody tr td:nth-child(3),
+.rightSide .tableauHoraire tbody tr td:nth-child(5) {
+    background-color: #b7c1c0;
+}
+.rightSide .tableauHoraire caption {
+    caption-side: top;
+}
+.rightSide .tableauHoraire td small {
+    color: grey;
+    font-size: 0.8em;
+}
+
+/* _____full-page_____ */
+/* Page gérer */
+.full-page div {
+    width: 100%;
+}
+
+.hide_tarifs_form,
+.hide_contact_form,
+.hide_clients_form,
+.hide_animaux_form {
+    display: none;
+}
+/* navigation admin */
+.buttonColorAdminNav {
+    background-color: #005b8b;
+    border-color: #005b8b;
+    border-radius: 20px 20px;
+}
+
+/* --------------------------- Pied de page --------------------------- */
+/* Flèche pour remonter la page */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #808080;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    display: none;
+    opacity: 0.7;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.back-to-top-button:hover {
+    opacity: 1;
+}
+  
+/* Couleur du footer et règlages */
+.couleurFooter {
+    background-color: #4e6570;
+    border-top: 2px solid #FF9934;
+    font-size: 1.1em;
+}
+/* Menu footer */
+.navFooter,
+.copyrighting,
+.socialNetwork {
+    width: 30%;
+}
+.navFooter a {
+    text-decoration: none;
+}
+.navFooter a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.copyrighting a {
+    text-decoration: none;
+}
+.copyrighting a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton réseaux sociaux */
+.socialButton {
+    font-size: 1.5vw;
+    width: 3.125vw;
+    height: 3.125vw;
+    border-radius: 50%;
+    background: #4e6570;
+    box-shadow:  5px 5px 8px #1f282d,
+                 -5px -5px 8px #7da2b3;
+}
+.socialButton:hover {
+    border-radius: 50%;
+    background: #4e6570;
+    box-shadow: inset 5px 5px 2px #1f282d,
+                inset -5px -5px 2px #7da2b3;
+}
+.socialButton :first-child {
+    position: relative;
+    top: 0.105vw;
+}
+.socialButton .fa-facebook-f {
+    color:#3a5791;
+    text-shadow: 0px 0px 2px white;
+} 
+.socialButton .fa-youtube {
+    color: red;
+    text-shadow: 0px 0px 2px white;
+} 
+.socialButton .fa-twitter {
+    color:#1c9cea;
+    text-shadow: 0px 0px 2px white;
+} 
+.socialButton .fa-linkedin {
+    color:#0073b1;
+    text-shadow: 0px 0px 2px white;
+} 
+
+/* Média queries mobile */
+@media (max-width: 64em) {
+
+    /* ------- MENU -------- */
+    /* Liste navigation par défaut */
+    .menu-principal,
+    .menu-principal li
+    {
+        display: none;
+        margin: 0;
+    }
+
+    /* Bouton menu burger */
+    .burger-menu-button {
+        display: block;
+        margin-right: 1em;
+        font-size: 1.8em;
+    }
+    .burger-menu-button i {
+        color: #4E6570;
+    }
+
+    /* Liste menu burger */
+    .burger-menu-item {
+        display: flex;
+        background-color: #4E6570;
+    }
+    .showMobileMenu {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+        align-items: center;
+    }
+    .burger-menu li {
+        margin: 0.5em;
+    }
+    .burger-menu li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* ------- ASIDE -------- */
+    /* Réglage aside en colonne */
+    .wPage {
+        flex-direction: column;
+    }
+    .wPage .leftSide,
+    .wPage .rightSide {
+        margin-bottom: 1.5em;
+        width: 100%;
+    }
+
+    /* ------- FOOTER -------- */
+    .couleurFooter {
+        flex-direction: column;
+    }
+    .couleurFooter div {
+        margin-bottom: 2em;
+    }
+    .copyrighting {
+        width: 100%;
+    }
+    .socialButton {
+        scale: 1.8;
+    }
+}
+
+/* Média querie pour la taille des boutons réseaux sociaux */
+@media (max-width: 31.25em) {
+    .socialButton {
+        scale: 3;
+    }
+}
